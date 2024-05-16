@@ -11,8 +11,8 @@ document
   });
 
 document.querySelectorAll(".delete-btn").forEach((btnConfirm) => {
-  const id = btnConfirm.dataset.id;
   btnConfirm.addEventListener("click", (e) => {
+    const id = btnConfirm.dataset.id;
     const options = {
       title: "Are you sure?",
       type: "danger",
@@ -73,7 +73,6 @@ async function updateUser(event){
 
 async function deleteUser(id){
   try{
-    console.log(id);
     let res = await fetch('/users', {
       method: 'DELETE',
       headers: {
